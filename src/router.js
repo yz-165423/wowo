@@ -1,23 +1,33 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Head from './components/head.vue'
+import Index from './components/index.vue'
+import Footer from './components/footer.vue'
+import sjrz from './components/sjrz.vue'
+import gywm from './components/gywm.vue'
+import rjxz from './components/rjxz.vue'
+import ydzf from './components/ydzf.vue'
+import fksb from './components/fksb.vue'
+import sjxt from './components/sjxt.vue'
+import zmdl from './components/zmdl.vue'
+import cwdls from './components/cwdls.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+    { path: '/',component: Home},
+    {path:'/head',component:Head},
+    {path:'/index',component:Index},
+    {path:'/footer',component:Footer},
+    {path:'/sjrz',component:sjrz},
+    {path:'/gywm',component:gywm},
+    {path:'/rjxz',component:rjxz},
+    {path:'/ydzf',component:ydzf},
+    {path:'/fksb',component:fksb},
+    {path:'/sjxt',component:sjxt},
+    {path:'/zmdl',component:zmdl},
+    {path:'/cwdls',component:cwdls},
   ]
 })
